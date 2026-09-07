@@ -43,9 +43,8 @@ class BooksCollector:
 
     # добавляем книгу в Избранное
     def add_book_in_favorites(self, name):
-        if name in self.books_genre:
-            if name not in self.favorites:
-                self.favorites.append(name)
+        if name in self.books_genre and name not in self.favorites:
+            self.favorites.append(name)
 
     # удаляем книгу из Избранного
     def delete_book_from_favorites(self, name):
